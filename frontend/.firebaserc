@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ai-media-search": {
+      "hosting": {
+        "frontend": [
+          "ai-media-search"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ai-media-search"
+  }
+}

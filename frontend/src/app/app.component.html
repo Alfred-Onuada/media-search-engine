@@ -1,0 +1,30 @@
+<header>
+  <div class="searchContainer">
+    <input type="search" [placeholder]="placeholder"
+      class="searchInput"
+      [(ngModel)]="query"
+      (keydown)="checkKey($event)">
+    <button mat-flat-button color="primary"
+      class="searchBtn"
+      (click)="searchImages()"
+      [disabled]="loading">Search</button>
+  </div>
+
+  <mat-icon aria-hidden="false" aria-label="Upload button" fontIcon="file_upload"
+    class="uploadIcon"
+    (click)="openUploadModal()"></mat-icon>
+</header>
+
+<div class="container">
+  <h1 class="errorText">{{ error }}</h1>
+  <div class="images">
+    <ngx-skeleton-loader count="15" appearance="circle"
+      [theme]="skeletonCss"
+      *ngIf="loading">
+    </ngx-skeleton-loader>
+
+    <img src="{{ baseUrl }}/image/{{ img }}?height=350&width=350" alt="Picture" 
+      loading="lazy"
+      *ngFor="let img of images">
+  </div>
+</div>

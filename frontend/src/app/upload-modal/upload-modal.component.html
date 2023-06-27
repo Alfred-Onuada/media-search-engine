@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="uploadTitle">Upload some images and make them instantly searchable</h1>
+  <input type="file" accept="image/*" multiple
+    (change)="handleUpload($event)"
+    name="images"
+    [disabled]="loading">
+
+  <div class="uploadProgress" *ngIf="loading">
+    <h4>Files are uploading</h4>
+
+    <div class="uploadItem" *ngFor="let item of uploadTasks">
+      <h4>{{ item.fileName }}</h4>
+      <mat-progress-bar modse="determinate" [value]="(item.transferedBytes/item.totalBytes) * 100"></mat-progress-bar>
+      <div class="fileSize">
+        <h4>{{ item.transferedBytes | bytes}}</h4>
+        <h4>{{ item.totalBytes | bytes }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="warningText">Note all uploaded files are publicly available</h5>
+</div>

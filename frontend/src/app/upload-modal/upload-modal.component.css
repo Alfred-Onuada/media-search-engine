@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;700&display=swap');
+
+.container {
+  padding: 100px;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.warningText {
+  margin-top: 40px;
+  color: red;
+}
+
+* {
+  font-family: 'Geologica', Roboto, sans-serif;
+}
+
+.uploadProgress {
+  margin: 25px 0px;
+}
+
+.uploadProgress h4 {
+  margin: 5px 0px;
+  font-size: 18px;
+}
+
+.uploadItem {
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 transparent, 0 0 transparent, 0 0 15px rgba(0,0,0,.1);
+  margin: 5px 0px;
+}
+
+.uploadItem h4 {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.fileSize {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
